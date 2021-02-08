@@ -13,3 +13,59 @@ body {
     overflow: hidden;
     margin: 0;
 }
+
+h1,
+h3,
+h4 {
+    text-align: center;
+}
+
+.simonBtn {
+    height: 100px;
+    width: 100px;
+    opacity: .5;
+    cursor: pointer;
+}
+
+.yellowBtn {
+    --btnColor: yellow;
+    background-color: var(--btnColor);
+    border-radius: 50px 0px 0px 0px;
+}
+
+.redBtn {
+    --btnColor: red;
+    background-color: var(--btnColor);
+    border-radius: 0px 50px 0px 0px;
+    margin-left: 15px;
+}
+
+.greenBtn {
+    --btnColor: green;
+    background-color: var(--btnColor);
+    border-radius: 0px 0px 50px 0px;
+    margin-left: 15px;
+}
+
+.blueBtn {
+    --btnColor: blue;
+    background-color: var(--btnColor);
+    border-radius: 0px 0px 0px 50px;
+}
+
+.hidden {
+    display: none;
+}
+
+.addPulse {
+    animation: pulse 1.4s ease-in-out;
+}
+
+@keyframes pulse {
+    0%,
+    100% {}
+    50% {
+        opacity: 1;
+        box-shadow: 3px 3px 3px var(--btnColor), 0px 0px 3px var(--btnColor), 0px 3px 3px var(--btnColor), 3px 3px 0px var(--btnColor), 3px 0px 0px var(--btnColor);
+    }
+}
